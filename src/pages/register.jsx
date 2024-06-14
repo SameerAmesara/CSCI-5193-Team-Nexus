@@ -147,19 +147,6 @@ export const Register = () => {
                                 <p className="bg-gray-3002 text-black text-xs">Please select Image file</p>
                             </div>
 
-                            <div className="bg-white flex justify-center items-center">
-                                <div className="text-gray-600 md:pb-12 pb-8 px-2">
-                                    <MdOutlineFeaturedPlayList size={20} />
-                                </div>
-                                <textarea
-                                    name="skills"
-                                    value={skills}
-                                    onChange={handleChange}
-                                    placeholder="Skills"
-                                    className="outline-none w-full text-black bold-placeholder px-1 pr-3 py-2 border border-gray-300 rounded-md"
-                                />
-                            </div>
-
                             <div>
                                 <button
                                     disabled={loading}
