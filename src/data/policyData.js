@@ -1,0 +1,113 @@
+export const policyData = {
+  success: true,
+  Policies: [
+    {
+      vendorLogo: {
+        public_id: "logo/bnnihic0hbzzuuoenb8z",
+        url: "https://imgs.search.brave.com/t1fsukAmvoQg3IdYej5sVf-UxYIJzevhjVwb-FRb-bQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zZWVr/bG9nby5jb20vaW1h/Z2VzL0gvaGRmYy1s/aWZlLWxvZ28tNDI1/MjY0NDFFMy1zZWVr/bG9nby5jb20ucG5n",
+      },
+      _id: "64f854e900f78ef2175ce1e8",
+      title: "Life Insurance Plan",
+      description:
+        "Provides life cover with options for critical illness, disability benefits, and accidental death benefits.",
+      vendorName: "HDFC Life",
+      location: "Pune, India",
+      policyType: "Life Insurance",
+      coverage: "Term Life",
+      price: "6700",
+      status: "active",
+      createdAt: "2023-09-06T10:31:05.984Z",
+      __v: 0,
+    },
+    {
+      vendorLogo: {
+        public_id: "logo/c2iji0yp5sdiqjh3t25w",
+        url: "https://imgs.search.brave.com/10W1m-eKnMsfqCOxIZw7Umud5wti1pSF9_0x-8XmtjY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/Zm9yYmVzLmNvbS9h/ZHZpc29yL2luL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIyLzA3/L2lmZmNvLXRva2lv/LWxvZ28tZW5nbGlz/aC5zdmc.svg",
+      },
+      _id: "64f85a9200f78ef2175ce1f7",
+      title: "Travel Insurance",
+      description:
+        "Includes trip cancellation, medical expense coverage, and emergency evacuation.",
+      vendorName: "IFFCO-TOKIO",
+      location: "Bengaluru, India",
+      policyType: "Travel Insurance",
+      coverage: "Comprehensive",
+      price: "5600",
+      status: "active",
+      createdAt: "2023-09-06T10:55:14.866Z",
+      __v: 0,
+    },
+    {
+      vendorLogo: {
+        public_id: "logo/dqkq2qoitjncylimrxgt",
+        url: "https://imgs.search.brave.com/QL9sBVxTD3RdlOQtt8x4t4_RsKGYu4hyuiB4yduI0JM/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zZWVr/bG9nby5jb20vaW1h/Z2VzL1QvdGF0YS1h/aWctbG9nby04OUEx/NDUwQTAyLXNlZWts/b2dvLmNvbS5wbmc",
+      },
+      _id: "64f8627d00f78ef2175ce223",
+      title: "Pet Insurance",
+      description:
+        "Covers medical expenses for your pet including routine check-ups, surgeries, and emergency treatments.",
+      vendorName: "TATA AIG",
+      location: "Remote",
+      policyType: "Pet Insurance",
+      coverage: "Comprehensive",
+      price: "3400",
+      status: "active",
+      createdAt: "2023-09-06T11:29:01.715Z",
+      __v: 0,
+    },
+    {
+      vendorLogo: {
+        public_id: "logo/ezi7npljhnqnskci7jnh",
+        url: "https://res.cloudinary.com/dwltg98sm/image/upload/v1695394841/logo/ezi7npljhnqnskci7jnh.jpg",
+      },
+      _id: "64f72a7948a99646459b3ece",
+      title: "Comprehensive Car Insurance",
+      description:
+        "Offers collision and non-collision damage, personal injury protection, and roadside assistance.",
+      vendorName: "IFFCO-TOKIO",
+      location: "Noida",
+      policyType: "Car Insurance",
+      coverage: "Full Coverage",
+      price: "4500",
+      status: "active",
+      createdAt: "2023-09-05T13:17:45.923Z",
+      __v: 0,
+    },
+    {
+      vendorLogo: {
+        public_id: "logo/bdvkp6smcoswbh8aepdn",
+        url: "https://res.cloudinary.com/dwltg98sm/image/upload/v1693997566/logo/bdvkp6smcoswbh8aepdn.jpg",
+      },
+      _id: "64f859ff00f78ef2175ce1ec",
+      title: "Comprehensive Health Insurance",
+      description:
+        "Covers medical expenses including hospitalization, surgery, and outpatient treatment.",
+      vendorName: "TATA AIG",
+      location: "Mumbai, India",
+      policyType: "Health Insurance",
+      coverage: "Full Coverage",
+      price: "12000",
+      status: "active",
+      createdAt: "2023-09-06T10:52:47.030Z",
+      __v: 0,
+    },
+    {
+      vendorLogo: {
+        public_id: "logo/poyliltzmcylkrcasoqn",
+        url: "https://res.cloudinary.com/dwltg98sm/image/upload/v1693998930/logo/poyliltzmcylkrcasoqn.jpg",
+      },
+      _id: "64f85f5200f78ef2175ce211",
+      title: "Home Insurance",
+      description:
+        "Provides coverage for damages to your home and personal property from various perils.",
+      vendorName: "HDFC Life",
+      location: "Bengaluru, India",
+      policyType: "Home Insurance",
+      coverage: "Full Coverage",
+      price: "12000",
+      status: "active",
+      createdAt: "2023-09-06T11:15:30.508Z",
+      __v: 0,
+    },
+  ],
+};
