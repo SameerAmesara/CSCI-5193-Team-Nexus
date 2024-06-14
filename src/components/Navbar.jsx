@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Avatar } from "@mantine/core";
+import { Avatar, Menu } from "@mantine/core";
 import { FaBars } from "react-icons/fa";
 import { RxCross1 } from "react-icons/rx";
 import { MdOutlineBusinessCenter, MdOutlineDashboard } from "react-icons/md";
-import { Menu } from "@mantine/core";
 import { FaUserCircle, FaSave } from "react-icons/fa";
 import { MdDoneAll } from "react-icons/md";
 import { RiLogoutBoxFill } from "react-icons/ri";
@@ -13,7 +12,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { logOrNot } from "../actions/UserActions";
 import { useNavigate } from "react-router-dom";
 import { logoutClearState } from "../slices/UserSlice";
-import { motion } from "framer-motion";
 
 export const Navbar = () => {
   const { isLogin, me } = useSelector((state) => state.user);
@@ -33,7 +31,7 @@ export const Navbar = () => {
   return (
     <>
       <div className="text-white z-20 fixed min-w-full bg-gray-800">
-        <ul className="md:flex hidden justify-center items-center gap-24 pt-4 pb-3 font-semibold text-xl">
+        <div className="md:flex hidden justify-center items-center gap-24 pt-4 pb-3 font-semibold text-xl">
           <Link
             to="/"
             className="flex fixed left-24 justify-center items-center titleT"
@@ -80,11 +78,13 @@ export const Navbar = () => {
                 )}
                 <Link to="/applied">
                   <Menu.Item icon={<MdDoneAll size={14} />}>
-                    Applied Jobs
+                    My Policies
                   </Menu.Item>
                 </Link>
                 <Link to="/saved">
-                  <Menu.Item icon={<FaSave size={14} />}>Saved Jobs</Menu.Item>
+                  <Menu.Item icon={<FaSave size={14} />}>
+                    Saved Policies
+                  </Menu.Item>
                 </Link>
                 <Menu.Divider />
                 <Menu.Item
@@ -112,18 +112,18 @@ export const Navbar = () => {
               </Link>
             </span>
           )}
-        </ul>
+        </div>
 
-        <div className="py-3 px-3 md:hidden justify-between items-center flex">
+        <div className="py-3 px-3 md:hidden flex justify-between items-center">
           <Link
             to="/"
             className="text-lg titleT flex justify-center items-center gap-1"
           >
-            <MdOutlineBusinessCenter size={19} /> JOBLANE
+            <MdOutlineBusinessCenter size={19} /> INSURAMART
           </Link>
           <div className="flex justify-center items-center">
-            <div className="pr-12">
-              {isLogin ? (
+            {isLogin && (
+              <div className="pr-4">
                 <Menu shadow="md" width={200}>
                   <Menu.Target>
                     <Avatar
@@ -150,12 +150,12 @@ export const Navbar = () => {
                     )}
                     <Link to="/applied">
                       <Menu.Item icon={<MdDoneAll size={14} />}>
-                        Applied Jobs
+                        My Policies
                       </Menu.Item>
                     </Link>
                     <Link to="/saved">
                       <Menu.Item icon={<FaSave size={14} />}>
-                        Saved Jobs
+                        Saved Policies
                       </Menu.Item>
                     </Link>
                     <Menu.Divider />
@@ -168,25 +168,9 @@ export const Navbar = () => {
                     </Menu.Item>
                   </Menu.Dropdown>
                 </Menu>
-              ) : (
-                <span className="flex gap-3 fixed top-3 right-16">
-                  <Link
-                    className="cursor-pointer text-sm px-3 py-1 rounded-xl blueCol"
-                    to="/login"
-                  >
-                    Login
-                  </Link>
-                  <Link
-                    className="cursor-pointer text-sm px-3 py-1 rounded-xl blueCol"
-                    to="/register"
-                  >
-                    Register
-                  </Link>
-                </span>
-              )}
-            </div>
-
-            <div className="pr-1">
+              </div>
+            )}
+            <div>
               {toggle ? (
                 <RxCross1
                   size={24}
@@ -211,7 +195,7 @@ export const Navbar = () => {
             toggle ? "flex" : "hidden"
           } absolute w-screen h-screen z-20 md:hidden`}
         >
-          <ul className="bg-gray-800 bg-opacity-95 flex flex-col gap-20 text-2xl justify-start w-screen pt-20 items-center">
+          <ul className="bg-gray-800 bg-opacity-95 flex flex-col gap-8 text-2xl justify-start w-screen pt-20 items-center">
             <Link
               onClick={() => setToggle(!toggle)}
               to="/"
@@ -221,10 +205,10 @@ export const Navbar = () => {
             </Link>
             <Link
               onClick={() => setToggle(!toggle)}
-              to="/jobs"
+              to="/policies"
               className="cool-link"
             >
-              Jobs
+              Policies
             </Link>
             <Link
               onClick={() => setToggle(!toggle)}
@@ -240,6 +224,65 @@ export const Navbar = () => {
             >
               About
             </Link>
+            {isLogin ? (
+              <>
+                <Link
+                  onClick={() => setToggle(!toggle)}
+                  to="/profile"
+                  className="cool-link"
+                >
+                  My Profile
+                </Link>
+                {me.role === "admin" && (
+                  <Link
+                    onClick={() => setToggle(!toggle)}
+                    to="/admin/dashboard"
+                    className="cool-link"
+                  >
+                    Dashboard
+                  </Link>
+                )}
+                <Link
+                  onClick={() => setToggle(!toggle)}
+                  to="/applied"
+                  className="cool-link"
+                >
+                  My Policies
+                </Link>
+                <Link
+                  onClick={() => setToggle(!toggle)}
+                  to="/saved"
+                  className="cool-link"
+                >
+                  Saved Policies
+                </Link>
+                <Link
+                  onClick={() => setToggle(!toggle)}
+                  to="/logout"
+                  className="cool-link text-red-600"
+                  onClick={LogOut}
+                >
+                  Logout
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  className="cursor-pointer text-sm px-3 py-1 rounded-xl blueCol"
+                  to="/login"
+                  onClick={() => setToggle(!toggle)}
+                >
+                  Login
+                </Link>
+                <Link
+                  className="cursor-pointer text-sm px-3 py-1 rounded-xl blueCol"
+                  to="/register"
+                  onClick={() => setToggle(!toggle)}
+                >
+                  Register
+                </Link>
+              </>
+            )}
           </ul>
         </div>
       </div>
