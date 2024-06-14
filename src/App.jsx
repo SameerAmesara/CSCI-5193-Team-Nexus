@@ -8,7 +8,7 @@ import { Register } from "./pages/Register";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
-import styles from "./index.css";
+import "./index.css";
 
 function App() {
   const location = useLocation();
