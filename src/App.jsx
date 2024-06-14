@@ -1,5 +1,7 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import { Home } from './pages/Home';
+import { Login } from './pages/Login';
+import { Register } from './pages/Register';
 import { Navbar } from './components/Navbar';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSelector, useDispatch } from 'react-redux'
@@ -15,6 +17,8 @@ function App() {
         <Navbar/ >
         <Routes>
             <Route exact path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
         </Routes>
     </>
     )
