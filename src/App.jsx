@@ -4,7 +4,7 @@ import { Policies } from "./pages/Policies";
 import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
 import { Login } from "./pages/Login";
-import { Register } from "./pages/Register";
+import { Register } from "./pages/register";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
