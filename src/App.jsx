@@ -4,7 +4,7 @@ import { Policies } from "./pages/Policies";
 import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
 import { Login } from "./pages/Login";
-import { Register } from "./pages/Register";
+import { SignUp } from "./pages/SignUp";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import "react-toastify/dist/ReactToastify.css";
@@ -25,7 +25,7 @@ function App() {
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<SignUp />} />
       </Routes>
       {!isAuthPage && <Footer />}
     </>
