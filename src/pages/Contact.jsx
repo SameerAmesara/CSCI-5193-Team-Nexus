@@ -4,7 +4,7 @@ import { MetaData } from "../components/MetaData";
 export const Contact = () => {
   return (
     <>
-      <MetaData title="About" />
+      <MetaData title="InsuraMart/Contact" />
       <div className="min-h-screen md:px-20 px-3  pt-14 flex   text-black bg-gray-3002">
         <div className="  w-full  flex  pt-28 flex-col justify-start  items-center gap-4 bg-gray-3002">
           <div className="flex md:flex-row flex-col items-center justify-center md:gap-10 gap-1">

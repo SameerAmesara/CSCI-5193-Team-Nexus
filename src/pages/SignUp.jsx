@@ -69,7 +69,7 @@ export const SignUp = () => {
 
   return (
     <>
-      <MetaData title="Register" />
+      <MetaData title="InsuraMart/Register" />
       <div className="bg-gray-3002 min-h-screen flex justify-center items-center text-black">
         <form
           onSubmit={handleSubmit}

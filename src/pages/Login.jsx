@@ -33,7 +33,7 @@ export const Login = () => {
 
   return (
     <>
-      <MetaData title="Login" />
+      <MetaData title="InsuraMart/Login" />
       <div className="bg-gray-3002 min-h-screen flex justify-center items-center">
         <form
           onSubmit={handleLogin}
